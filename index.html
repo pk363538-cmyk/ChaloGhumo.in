@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>ChaloGhumo - Tour & Travels</title>  
     <style>  
+        /* Logo aur Text ko side-by-side lane ke liye */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Animation: Slide aur Pop effect */
+@keyframes slidePop {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-30px) scale(0.8); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0) scale(1); 
+    }
+}
+
         /* General Styles */  
         body {  
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
@@ -184,7 +203,9 @@
             <a href="#" class="logo">
     <img src="logo.png1.jpg" alt="ChaloGhumo Logo" style="height: 50px;">
           <span style="color: #00BFFF; font-family: sans-serif; font-weight: bold; font-size: 1.5rem; margin-left: 5px;">ChaloGhumo</span>
-</a>
+
+
+
 
 
                 
