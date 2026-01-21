@@ -1,0 +1,270 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ChaloGhumo - Tour & Travels</title>  
+    <style>  
+        /* General Styles */  
+        body {  
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            color: #333;  
+            line-height: 1.6;  
+        }  
+  
+        /* Navigation */  
+        header {  
+            background-color: #fff;  
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+            position: fixed;  
+            width: 100%;  
+            top: 0;  
+            z-index: 1000;  
+        }  
+  
+        nav {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 1rem 2rem;  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+        }  
+  
+        .logo {  
+            font-size: 1.8rem;  
+            font-weight: bold;  
+            color: #007bff; /* Travel Blue */  
+            text-decoration: none;  
+        }  
+  
+        .nav-links a {  
+            margin-left: 20px;  
+            text-decoration: none;  
+            color: #555;  
+            font-weight: 500;  
+        }  
+  
+        .nav-links a:hover {  
+            color: #007bff;  
+        }  
+  
+        /* Hero Section */  
+        .hero {  
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?travel,mountains');  
+            background-size: cover;  
+            background-position: center;  
+            height: 80vh;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            text-align: center;  
+            color: white;  
+            padding: 0 20px;  
+            margin-top: 60px;  
+        }  
+  
+        .hero h1 {  
+            font-size: 3rem;  
+            margin-bottom: 1rem;  
+        }  
+  
+        .hero p {  
+            font-size: 1.5rem;  
+            margin-bottom: 2rem;  
+        }  
+  
+        .cta-button {  
+            background-color: #ff9800;  
+            color: white;  
+            padding: 15px 30px;  
+            text-decoration: none;  
+            border-radius: 5px;  
+            font-weight: bold;  
+            transition: background 0.3s;  
+        }  
+  
+        .cta-button:hover {  
+            background-color: #e68900;  
+        }  
+  
+        /* Packages Section */  
+        .section {  
+            padding: 4rem 2rem;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+  
+        .section-title {  
+            text-align: center;  
+            font-size: 2.5rem;  
+            margin-bottom: 3rem;  
+            color: #333;  
+        }  
+  
+        .packages-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 2rem;  
+        }  
+  
+        .package-card {  
+            border: 1px solid #eee;  
+            border-radius: 10px;  
+            overflow: hidden;  
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+            transition: transform 0.3s;  
+        }  
+  
+        .package-card:hover {  
+            transform: translateY(-5px);  
+        }  
+  
+        .package-img {  
+            width: 100%;  
+            height: 200px;  
+            background-color: #ddd;  
+            object-fit: cover;  
+        }  
+  
+        .package-info {  
+            padding: 1.5rem;  
+        }  
+  
+        .price {  
+            color: #007bff;  
+            font-size: 1.25rem;  
+            font-weight: bold;  
+            margin: 10px 0;  
+        }  
+  
+        /* Contact Section */  
+        .contact-form {  
+            max-width: 600px;  
+            margin: 0 auto;  
+            display: flex;  
+            flex-direction: column;  
+            gap: 15px;  
+        }  
+  
+        input, textarea {  
+            padding: 15px;  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+            font-size: 1rem;  
+        }  
+  
+        button.submit-btn {  
+            padding: 15px;  
+            background-color: #007bff;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            font-size: 1.1rem;  
+        }  
+  
+        /* Footer */  
+        footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 2rem;  
+            margin-top: 4rem;  
+        }  
+    </style>  
+</head>  
+<body>  
+  
+    <header>  
+        <nav>  
+            <a href="#" class="logo">ChaloGhumo</a>  
+            <div class="nav-links">  
+                <a href="#home">Home</a>  
+                <a href="#packages">Packages</a>  
+                <a href="#about">About</a>  
+                <a href="#contact">Contact</a>  
+            </div>  
+        </nav>  
+    </header>  
+  
+    <section id="home" class="hero">  
+        <div>  
+            <h1>Your Journey Begins Here</h1>  
+            <p>Affordable tour packages to your dream destinations.</p>  
+            <a href="#packages" class="cta-button">View Packages</a>  
+        </div>  
+    </section>  
+  
+    <section id="packages" class="section">  
+        <h2 class="section-title">Popular Packages</h2>  
+        <div class="packages-grid">  
+              
+            <div class="package-card">  
+                <img src="https://source.unsplash.com/600x400/?manali,snow" alt="Manali" class="package-img">  
+                <div class="package-info">  
+                    <h3>Delhi to Manali Special</h3>  
+                    <p>5 Days / 4 Nights including Volvo bus, hotel stay, and sightseeing.</p>  
+                    <div class="price">₹5,999 per person</div>  
+                    <a href="#contact" style="color: #007bff; text-decoration: none; font-weight: bold;">Book Now &rarr;</a>  
+                </div>  
+            </div>  
+  
+            <div class="package-card">  
+                <img src="https://source.unsplash.com/600x400/?beach,goa" alt="Goa" class="package-img">  
+                <div class="package-info">  
+                    <h3>Goa Beach Escape</h3>  
+                    <p>4 Days / 3 Nights. Experience the sun, sand, and sea.</p>  
+                    <div class="price">₹7,499 per person</div>  
+                    <a href="#contact" style="color: #007bff; text-decoration: none; font-weight: bold;">Book Now &rarr;</a>  
+                </div>  
+            </div>  
+  
+            <div class="package-card">  
+                <img src="https://source.unsplash.com/600x400/?mountains,shimla" alt="Shimla" class="package-img">  
+                <div class="package-info">  
+                    <h3>Shimla Weekend Trip</h3>  
+                    <p>3 Days / 2 Nights. A perfect getaway to the Queen of Hills.</p>  
+                    <div class="price">₹4,999 per person</div>  
+                    <a href="#contact" style="color: #007bff; text-decoration: none; font-weight: bold;">Book Now &rarr;</a>  
+                </div>  
+            </div>  
+  
+        </div>  
+    </section>  
+  
+    <section id="about" class="section" style="background-color: #f9f9f9;">  
+        <h2 class="section-title">Why Travel With ChaloGhumo?</h2>  
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">  
+            <p>We provide the best budget-friendly travel experiences without compromising on quality. From transparent pricing to 24/7 support, we ensure your trip is memorable and hassle-free.</p>  
+        </div>  
+    </section>  
+  
+    <section id="contact" class="section">  
+        <h2 class="section-title">Get a Quote</h2>  
+        <form class="contact-form">  
+            <input type="text" placeholder="Your Name" required>  
+            <input type="email" placeholder="Your Email" required>  
+            <input type="tel" placeholder="Phone Number" required>  
+            <select style="padding: 15px; border: 1px solid #ddd; border-radius: 5px;">  
+                <option>Select Package</option>  
+                <option>Manali Special</option>  
+                <option>Goa Beach Escape</option>  
+                <option>Shimla Weekend</option>  
+                <option>Custom Plan</option>  
+            </select>  
+            <textarea rows="5" placeholder="Any specific requirements?"></textarea>  
+            <button type="submit" class="submit-btn">Send Enquiry</button>  
+        </form>  
+    </section>  
+  
+    <footer>  
+        <h3>ChaloGhumo Tour & Travels</h3>  
+        <p>&copy; 2026 ChaloGhumo. All rights reserved.</p>  
+    </footer>  
+  
+</body>  
+</html>  
