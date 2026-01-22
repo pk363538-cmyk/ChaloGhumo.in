@@ -23,17 +23,56 @@
         transform: translateX(0) scale(1); 
     }
 }
-/* Hero Section: 4 Photos ka Slider */
+/* Hero Section: Back-to-Back Photos (No Black/Grey Screen) */
 .hero {
     height: 80vh; 
     width: 100%;
+    /* Black/Grey color hata diya */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: slideShow 16s infinite; 
+    /* 16 second ka loop: Har photo 4 second rukegi */
+    animation: quickSwitch 16s infinite; 
+}
+
+/* Photo turant badlegi (Snap Effect with Zoom) */
+@keyframes quickSwitch {
+    /* --- Photo 1: Manali --- */
+    0% { background-image: url('manali.jpg'); transform: scale(1); }
+    24% { background-image: url('manali.jpg'); transform: scale(1.1); } /* 24% tak yahi photo rahegi */
+    
+    /* --- Photo 2: Manali 1 (Turant Switch) --- */
+    25% { background-image: url('manali.jpg1'); transform: scale(1); }
+    49% { background-image: url('manali.jpg1'); transform: scale(1.1); }
+
+    /* --- Photo 3: Rajasthan (Turant Switch) --- */
+    50% { background-image: url('rajasthan.jpg'); transform: scale(1); }
+    74% { background-image: url('rajasthan.jpg'); transform: scale(1.1); }
+
+    /* --- Photo 4: Rajasthan 1 (Turant Switch) --- */
+    75% { background-image: url('rajasthan.jpg1'); transform: scale(1); }
+    99% { background-image: url('rajasthan.jpg1'); transform: scale(1.1); }
+
+    100% { background-image: url('manali.jpg'); transform: scale(1); }
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Bohot halka shadow taaki photo saaf dikhe */
+}
+
+.hero div {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
 }
 
 /* 4 Photos ka Animation Loop */
